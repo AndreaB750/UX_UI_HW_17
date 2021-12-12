@@ -1,5 +1,6 @@
 body {
     background-color: #042B27;
+    background-image: linear-gradient(rgba(97, 155, 138, 0), rgba(97, 155, 138,.5));
 }
 /* navbar */
 .inline-block {
@@ -23,7 +24,7 @@ ul {
     width: 70%;
     float: right;
     text-align: right;
-    color: #FAF7F1;
+    color: #F0EADB;
     font-family: "Montserrat", sans-serif;
     font-size: 24px;
 }
@@ -37,7 +38,6 @@ li {
 .heroImg {
     height: 600px;
     padding: 25px;
-    background-image: linear-gradient(rgba(97, 155, 138, 0), rgba(97, 155, 138,.5));
 }
 
 .content {
@@ -46,17 +46,70 @@ li {
 }
 
 h1 {
-    color: #FAF7F1;
+    color: #F0EADB;
     font-family: "Vidaloka", serif;
     font-size: 64px;
 }
 
 h3 {
-    color: #FAF7F1;
+    color: #F0EADB;
     font-family: "Montserrat", sans-serif;
     font-size: 24px;
     padding-left: 300px;
     padding-right: 300px;
+}
+/* featured case studies */
+
+h2 {
+    color: #F0EADB;
+    font-family: "Vidaloka", serif;
+    font-size: 48px;
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+}
+
+h5 {
+    color: #F0EADB;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    width: 40%;
+    display: inline-block;
+    text-align: right;
+    padding-left: 80px;
+}
+
+.caseStudiesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "first second third"
+        "fourth fifth sixth";
+}
+
+.caseFirst {
+    grid-area: first;
+}
+
+.caseSecond {
+    grid-area: second;
+}
+
+.caseThird {
+    grid-area: third;
+}
+
+.caseFourth {
+    grid-area: fourth;
+}
+
+.caseFifth {
+    grid-area: fifth;
+}
+
+.caseSixth {
+    grid-area: sixth;
 }
 
 /* footer */
@@ -72,7 +125,7 @@ p {
     padding: 25px;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
-    color: #FAF7F1;
+    color: #F0EADB;
 }
 
 h4 {
@@ -82,10 +135,25 @@ h4 {
     padding: 25px;
     font-family: "Vidaloka", serif;
     font-size: 18px;
-    color: #FAF7F1;
+    color: #F0EADB;
 }
 
 img {
     vertical-align: top;
     padding: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        flex-direction: column;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "first"
+            "second"
+            "third"
+            "fourth"
+            "fifth"
+            "sixth";
+    }
 }
